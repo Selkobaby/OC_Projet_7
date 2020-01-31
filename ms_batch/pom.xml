@@ -9,9 +9,9 @@
 		<relativePath/> <!-- lookup parent from repository -->
 	</parent>
 	<groupId>com.p7.batch</groupId>
-	<artifactId>batch</artifactId>
+	<artifactId>ms_batch</artifactId>
 	<version>0.0.1-SNAPSHOT</version>
-	<name>batch</name>
+	<name>ms_batch</name>
 	<description>Demo project for Spring Boot</description>
 
 	<properties>
@@ -43,6 +43,10 @@
 			<artifactId>postgresql</artifactId>
 			<scope>runtime</scope>
 		</dependency>
+		<dependency>
+  			<groupId>org.springframework.cloud</groupId>
+  			<artifactId>spring-cloud-starter-config</artifactId>
+  		</dependency>
 		<dependency>
 			<groupId>org.projectlombok</groupId>
 			<artifactId>lombok</artifactId>
