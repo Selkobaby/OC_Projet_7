@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/Projet_7.iml" filepath="$PROJECT_DIR$/Projet_7.iml" />
+      <module fileurl="file://$PROJECT_DIR$/config-server/config-server.iml" filepath="$PROJECT_DIR$/config-server/config-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/eureka-server/eureka-server.iml" filepath="$PROJECT_DIR$/eureka-server/eureka-server.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ms_batch/ms_batch.iml" filepath="$PROJECT_DIR$/ms_batch/ms_batch.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ms_client/ms_client.iml" filepath="$PROJECT_DIR$/ms_client/ms_client.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ms_emprunt/ms_emprunt.iml" filepath="$PROJECT_DIR$/ms_emprunt/ms_emprunt.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ms_livre/ms_livre.iml" filepath="$PROJECT_DIR$/ms_livre/ms_livre.iml" />
+      <module fileurl="file://$PROJECT_DIR$/ms_user/ms_user.iml" filepath="$PROJECT_DIR$/ms_user/ms_user.iml" />
+      <module fileurl="file://$PROJECT_DIR$/zuul-server/zuul-server.iml" filepath="$PROJECT_DIR$/zuul-server/zuul-server.iml" />
+    </modules>
+  </component>
+</project>
