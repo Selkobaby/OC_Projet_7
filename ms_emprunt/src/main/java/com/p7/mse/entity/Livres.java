@@ -26,6 +26,9 @@ public class Livres {
     @Column(name = "Titre")
     private String titre;
 
+    @Column(name = "Quantité")
+    private int quantité;
+
     @Column(name = "Description")
     private String description;
 
@@ -44,9 +47,5 @@ public class Livres {
 
     @Column(name = "Image")
     private String image;
-
-    @Column(name = "Disponible")
-    private boolean disponible;
-
 
 }
