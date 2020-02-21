@@ -23,7 +23,7 @@
       <module name="ms_client" target="1.8" />
       <module name="ms_emprunt" target="1.8" />
       <module name="ms_livre" target="1.8" />
-      <module name="ms_user" target="1.8" />
+      <module name="ms_user" target="11" />
       <module name="zuul-server" target="1.8" />
     </bytecodeTargetLevel>
   </component>
