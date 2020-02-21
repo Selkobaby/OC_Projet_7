@@ -45,4 +45,13 @@ public class UsersService {
         usersRepository.deleteById(id);
     }
 
+    public boolean passwordOk(String email, String password) {
+        Optional<Users> usersByMail = this.usersByMail(email);
+        boolean rawPassword = false;
+        if(!usersByMail.isEmpty()) {
+            rawPassword = BCrypt.checkpw(password, usersByMail.get().getPassword());
+        }
+        return rawPassword;
+    }
+
 }
