@@ -45,8 +45,8 @@ public class Livres {
     @Column(name = "Image")
     private String image;
 
-    @Column(name = "Disponible")
-    private boolean disponible;
+    @Column(name = "Quantité")
+    private int quantite;
 
 
 }
