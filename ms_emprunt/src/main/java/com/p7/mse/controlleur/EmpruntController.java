@@ -8,10 +8,13 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
+import org.springframework.web.bind.annotation.PostMapping;
+import org.springframework.web.bind.annotation.RestController;
 
+import java.text.SimpleDateFormat;
 import java.util.*;
 
-@Controller
+@RestController
 public class EmpruntController {
 
     @Autowired
@@ -94,6 +97,30 @@ public class EmpruntController {
             }
 
             return users;
+        }
+
+    @PostMapping(value = {"/extendEmprunt/{empruntId}"})
+    public Emprunt extendEmprunt(@PathVariable Long empruntId) throws EmpruntNotFoundException {
+        Emprunt emprunt = null;
+        try {
+            emprunt = empruntService.getEmprunt(empruntId).orElseThrow(() ->
+                    new EmpruntNotFoundException("Il n'y a pas d'emprunt avec cet id dans la base de donnée "+ empruntId));
+            if(emprunt.isSecondEmprunt()==true) {
+                System.out.println("C'est le second emprunt, vous ne pouvez pas étendre l'emprunt");
+                return null;
+            }
+
+            Date date = new Date();
+            SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd HH:mm:ss");
+            emprunt.setSecondEmprunt(true);
+            emprunt.setDate(date);
+            empruntService.updateEmprunt(empruntId, emprunt);
+
+        } catch(Exception e) {
+            System.out.println("Il n'y a pas d'emprunt dans la base do donnée pour cet id " +empruntId);
+        }
+
+        return emprunt;
         }
 
     }
