@@ -1,0 +1,8 @@
+com/p7/msu/repository/UsersRepository.class
+com/p7/msu/entity/Livres.class
+com/p7/msu/controller/UsersController.class
+com/p7/msu/service/UsersService.class
+com/p7/msu/entity/Users.class
+com/p7/msu/entity/Categories.class
+com/p7/msu/entity/Emprunt.class
+com/p7/msu/exception/UsersNotFoundException.class

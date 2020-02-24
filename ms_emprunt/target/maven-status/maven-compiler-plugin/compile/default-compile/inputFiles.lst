@@ -1,0 +1,9 @@
+/Users/bagciselami/Desktop/Java/OC_Projet_7/ms_emprunt/src/main/java/com/p7/mse/entity/Users.java
+/Users/bagciselami/Desktop/Java/OC_Projet_7/ms_emprunt/src/main/java/com/p7/mse/entity/Livres.java
+/Users/bagciselami/Desktop/Java/OC_Projet_7/ms_emprunt/src/main/java/com/p7/mse/MsEmpruntApplication.java
+/Users/bagciselami/Desktop/Java/OC_Projet_7/ms_emprunt/src/main/java/com/p7/mse/exception/EmpruntNotFoundException.java
+/Users/bagciselami/Desktop/Java/OC_Projet_7/ms_emprunt/src/main/java/com/p7/mse/entity/Emprunt.java
+/Users/bagciselami/Desktop/Java/OC_Projet_7/ms_emprunt/src/main/java/com/p7/mse/entity/Categories.java
+/Users/bagciselami/Desktop/Java/OC_Projet_7/ms_emprunt/src/main/java/com/p7/mse/service/EmpruntService.java
+/Users/bagciselami/Desktop/Java/OC_Projet_7/ms_emprunt/src/main/java/com/p7/mse/repository/EmpruntRepository.java
+/Users/bagciselami/Desktop/Java/OC_Projet_7/ms_emprunt/src/main/java/com/p7/mse/controlleur/EmpruntController.java
