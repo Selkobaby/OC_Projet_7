@@ -21,13 +21,13 @@ public class Emprunt {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "Id")
+    @Column(name = "id")
     private long id;
 
-    @Column(name = "Date")
+    @Column(name = "date")
     private Date date;
 
-    @Column(name = "Second Emprunt")
+    @Column(name = "secondEmprunt")
     private boolean secondEmprunt;
 
     @ManyToOne(fetch = FetchType.EAGER)
@@ -36,9 +36,9 @@ public class Emprunt {
     @JsonIgnore
     private Livres livres;
 
-    @Column(name = "Emprunt Utilisateur")
     @ManyToMany
     @JoinTable(
+            name = "usersEmprunt",
             joinColumns = @JoinColumn(name = "Emprunt_Id"),
             inverseJoinColumns = @JoinColumn(name = "Users_Id")
     )

@@ -1,13 +1,10 @@
 package com.p7.msu.controller;
 
-import com.p7.msu.entity.Users;
 import com.p7.msu.exception.UsersNotFoundException;
 import com.p7.msu.service.UsersService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RestController;
 import org.springframework.web.bind.annotation.*;
-
-import java.util.List;
 
 @RestController
 @RequestMapping("")

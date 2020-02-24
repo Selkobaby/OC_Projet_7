@@ -20,33 +20,32 @@ public class Livres {
 
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "Id")
+    @Column(name = "id")
     private long id;
 
-    @Column(name = "Titre")
+    @Column(name = "titre")
     private String titre;
 
-    @Column(name = "Description")
+    @Column(name = "quantité")
+    private int quantité;
+
+    @Column(name = "description")
     private String description;
 
-    @Column(name = "Categorie")
     @ManyToMany(fetch = FetchType.EAGER)
     @OrderBy
     @JoinTable(
+            name = "categorieLivre",
             joinColumns = @JoinColumn (name = "Livres_Id"),
             inverseJoinColumns =  @JoinColumn (name = "Categorie_id")
     )
     @JsonIgnore
     private Set <Categories> categorieLivre = new HashSet<Categories>();
 
-    @Column(name = "Auteur")
+    @Column(name = "auteur")
     private String auteur;
 
-    @Column(name = "Image")
+    @Column(name = "image")
     private String image;
-
-    @Column(name = "Quantité")
-    private int quantite;
-
 
 }

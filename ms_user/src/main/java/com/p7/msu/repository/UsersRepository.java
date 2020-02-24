@@ -1,6 +1,5 @@
 package com.p7.msu.repository;
 
-import com.p7.msu.entity.Users;
 import org.springframework.data.jpa.repository.JpaRepository;
 import org.springframework.data.jpa.repository.Query;
 

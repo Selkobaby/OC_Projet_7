@@ -7,6 +7,8 @@ import lombok.NoArgsConstructor;
 import lombok.Setter;
 
 import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 
 @Entity
 @AllArgsConstructor
@@ -24,9 +26,8 @@ public class Categories {
     @Column(name = "Nom")
     private String nom;
 
-    @Column(name = "Livre")
     @ManyToMany(mappedBy = "categorieLivre")
     @OrderBy
     @JsonIgnore
-    private Livres livres;
+    private Set<Livres> livres = new HashSet<Livres>();
 }

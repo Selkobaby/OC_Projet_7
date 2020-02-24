@@ -16,27 +16,27 @@ import java.util.Set;
 @NoArgsConstructor
 @Getter
 @Setter
-@Table(name = "Utilisateurs")
+@Table(name = "Users")
 public class Users {
 
     @Id
-    @Column(name = "Id")
+    @Column(name = "id")
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private long id;
 
-    @Column(name = "Nom")
+    @Column(name = "nom")
     private String nom;
 
-    @Column(name = "Prenom")
+    @Column(name = "prenom")
     private String prenom;
 
-    @Column(name = "Email")
+    @Column(name = "email")
     private String email;
 
-    @Column(name = "Mot de Passe")
+    @Column(name = "password")
     private String password;
 
-    @Column(name = "Admin")
+    @Column(name = "admin")
     private boolean admin;
 
     @ManyToMany(mappedBy = "usersEmprunt")

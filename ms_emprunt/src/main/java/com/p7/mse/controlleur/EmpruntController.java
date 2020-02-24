@@ -5,7 +5,7 @@ import com.p7.mse.entity.Users;
 import com.p7.mse.exception.EmpruntNotFoundException;
 import com.p7.mse.service.EmpruntService;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.stereotype.Controller;
+import org.springframework.context.annotation.ComponentScan;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.PostMapping;
