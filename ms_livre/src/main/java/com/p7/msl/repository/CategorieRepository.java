@@ -1,6 +1,6 @@
 package com.p7.msl.repository;
 
-import com.p7.msl.Entity.Categories;
+import com.p7.msl.entity.Categories;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.stereotype.Repository;
 

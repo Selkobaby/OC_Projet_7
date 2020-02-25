@@ -1,4 +1,4 @@
-package com.p7.msl.Entity;
+package com.p7.msl.entity;
 
 import com.fasterxml.jackson.annotation.JsonIgnore;
 import lombok.AllArgsConstructor;

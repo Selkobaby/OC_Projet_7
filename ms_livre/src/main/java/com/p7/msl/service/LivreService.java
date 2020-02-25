@@ -1,6 +1,6 @@
 package com.p7.msl.service;
 
-import com.p7.msl.Entity.Livres;
+import com.p7.msl.entity.Livres;
 import com.p7.msl.repository.LivreRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;

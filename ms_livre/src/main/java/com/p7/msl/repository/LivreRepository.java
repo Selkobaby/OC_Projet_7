@@ -1,6 +1,6 @@
 package com.p7.msl.repository;
 
-import com.p7.msl.Entity.Livres;
+import com.p7.msl.entity.Livres;
 import org.springframework.data.jpa.repository.Query;
 import org.springframework.data.repository.CrudRepository;
 import org.springframework.data.repository.query.Param;

@@ -1,6 +1,6 @@
 package com.p7.msl.service;
 
-import com.p7.msl.Entity.Categories;
+import com.p7.msl.entity.Categories;
 import com.p7.msl.repository.CategorieRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
