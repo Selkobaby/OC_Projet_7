@@ -45,7 +45,12 @@
 				</exclusion>
 			</exclusions>
 		</dependency>
-	</dependencies>
+        <dependency>
+            <groupId>io.zipkin.brave</groupId>
+            <artifactId>brave</artifactId>
+            <version>5.9.5</version>
+        </dependency>
+    </dependencies>
 
 	<dependencyManagement>
 		<dependencies>
