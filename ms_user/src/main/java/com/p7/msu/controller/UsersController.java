@@ -1,5 +1,7 @@
 package com.p7.msu.controller;
 
+import com.p7.msu.entity.Users;
+import com.p7.msu.exception.MailNotFoundException;
 import com.p7.msu.exception.UsersNotFoundException;
 import com.p7.msu.service.UsersService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -18,9 +20,9 @@ public class UsersController {
         Users users = null;
         try{
             users = usersService.getUsersById(usersId).orElseThrow( () ->
-                    new UsersNotFoundException("Il n'y a pas d'utilsateur avec cet identifiant" +usersId));
+                    new UsersNotFoundException());
         } catch (Exception e){
-            System.out.println("Il n'y a pas d'utilisateur avec cet identifiant " + usersId + " " + e);
+            throw new UsersNotFoundException();
         }
         return users;
     }
@@ -33,10 +35,10 @@ public class UsersController {
             if(usersService.passwordOk(email, password)) {
                 try {
                     users = usersService.usersByMail(email).orElseThrow(() ->
-                            new UsersNotFoundException("Ce mail n'esxite pas"+email)
+                            new MailNotFoundException()
                     );
                 } catch(Exception e) {
-                   System.out.println("Ce mail n'esxite pas "+email+" "+e);
+                   throw new MailNotFoundException();
 
                 }
             } else {

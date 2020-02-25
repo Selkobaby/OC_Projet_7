@@ -30,7 +30,7 @@ public class EmpruntController {
         try {
             emprunts = (List<Emprunt>) empruntService.getAllEmprunt();
         } catch(Exception e) {
-            throw new EmpruntNotFoundException("Il n'y a pas d'emprunt dans la base de donnée "+e);
+            throw new EmpruntNotFoundException();
         }
         return emprunts;
     }
@@ -42,7 +42,7 @@ public class EmpruntController {
         try {
             emprunts = (List<Emprunt>) empruntService.getEmpruntByUsersId(id);
         } catch(Exception e) {
-            throw new EmpruntNotFoundException("Il n'y a pas d'emprunt pour cette utilisateur dans la base de donnée "+e);
+            throw new EmpruntNotFoundException();
         }
         return emprunts;
     }
@@ -70,7 +70,7 @@ public class EmpruntController {
                 try {
                     user = usersEmprunt(allEmprunt.get(i).getId());
                 } catch (Exception e) {
-                    throw new EmpruntNotFoundException("There isn't person for this loan..." + allEmprunt.get(i).getId() + ' ' + e);
+                    throw new EmpruntNotFoundException();
                 }
                 Users usersX = user.get(0);
 
@@ -90,10 +90,10 @@ public class EmpruntController {
                 try {
                     users = emprunt.getUsersEmprunt();
                 } catch (Exception e) {
-                    throw new EmpruntNotFoundException("There is no person for this id "+empruntId+" "+e);
+                    throw new EmpruntNotFoundException();
                 }
             } catch(Exception e) {
-                throw new EmpruntNotFoundException("There is no loans for this person id "+empruntId+" "+e);
+                throw new EmpruntNotFoundException();
             }
 
             return users;
@@ -104,7 +104,7 @@ public class EmpruntController {
         Emprunt emprunt = null;
         try {
             emprunt = empruntService.getEmprunt(empruntId).orElseThrow(() ->
-                    new EmpruntNotFoundException("Il n'y a pas d'emprunt avec cet id dans la base de donnée "+ empruntId));
+                    new EmpruntNotFoundException());
             if(emprunt.isSecondEmprunt()==true) {
                 System.out.println("C'est le second emprunt, vous ne pouvez pas étendre l'emprunt");
                 return null;
@@ -117,7 +117,7 @@ public class EmpruntController {
             empruntService.updateEmprunt(empruntId, emprunt);
 
         } catch(Exception e) {
-            System.out.println("Il n'y a pas d'emprunt dans la base do donnée pour cet id " +empruntId);
+            throw new EmpruntNotFoundException();
         }
 
         return emprunt;
