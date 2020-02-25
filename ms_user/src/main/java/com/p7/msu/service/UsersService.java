@@ -1,5 +1,6 @@
 package com.p7.msu.service;
 
+import com.p7.msu.entity.Users;
 import com.p7.msu.repository.UsersRepository;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.security.crypto.bcrypt.BCrypt;
